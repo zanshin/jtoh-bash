@@ -23,11 +23,11 @@ it is placed in the `after` directory. At the end of the process some statistics
 ## Scripts
 The following scripts are included.
 
-## jtoh.sh
+### jtoh.sh
 This is the main script. It reads in all the files in the `before` directory, processes them, and
 puts the migrated files in the `after` directory.
 
-## processpost.sh
+### processpost.sh
 This script processes each line of a post. The metadata entries in the YAML front matter are cleaned
 up via the `fix-*` scripts.
 
@@ -54,6 +54,12 @@ link post system was not consistent in setting this tag properly.
 This script inserts a new metadata line in to the YAML front matter. Hugo expects a `draft: true` or
 `draft: false` entry. As the migrating posts are all already published, the new line is set to
 `false`.
+
+## Caveats
+These scripts were written for my sites. One had always been a Jekyll-based site, the other had
+transitioned from hand-coded to Blogger to MoveableType to WordPress to Octopress and finally to
+Jekyll. Along the way parts of it got rather crufty. These scripts work for my postings. They are
+opinionated. They will almost certainly require modifications to work for your site(s).
 
 ## License
 [Licensed](LICENSE.md) under the MIT License.
