@@ -8,7 +8,7 @@ set -o pipefail
 # conversion works.
 #
 
-echo "Starting clean up..."
+echo "Starting migration..."
 
 BEFORE="$HOME/code/jtoh/before"
 AFTER="$HOME/code/jtoh/after"
@@ -24,5 +24,5 @@ for filename in *; do
 
 done
 
-echo -e "\n\n\n... and done."
+echo -e "\n\nMigration finished."
 exit 0
