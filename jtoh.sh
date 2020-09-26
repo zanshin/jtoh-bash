@@ -11,12 +11,12 @@ set -o pipefail
 echo "Starting clean up..."
 
 BEFORE="$HOME/code/jtoh/before"
-# AFTER="$HOME/code/jtoh/after"
+AFTER="$HOME/code/jtoh/after"
 
 cd "$BEFORE"
 for filename in *; do
 
-  "$HOME/code/jtoh/processpost.sh" "$filename"
+  "$HOME/code/jtoh/processpost.sh" "$filename" > "$AFTER"/"$filename"
 
 done
 
