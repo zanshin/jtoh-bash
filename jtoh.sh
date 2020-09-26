@@ -12,11 +12,15 @@ echo "Starting clean up..."
 
 BEFORE="$HOME/code/jtoh/before"
 AFTER="$HOME/code/jtoh/after"
+filetotal=$(ls -1 "$BEFORE" | wc -l)
+filecount=1
 
 cd "$BEFORE"
 for filename in *; do
 
   "$HOME/code/jtoh/processpost.sh" "$filename" > "$AFTER"/"$filename"
+  echo -ne "Processing file $filecount of $filetotal \r"
+  ((filecount++))
 
 done
 

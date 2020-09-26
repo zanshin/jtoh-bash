@@ -62,6 +62,10 @@ do
     "$dashes"*)
       printf "%s\n" "$dashes"
       ;;
+    *)
+      # pass through all other lines
+      printf "%s\n" "$line"
+      ;;
   esac
 
 done < "$1"
