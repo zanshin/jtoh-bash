@@ -62,6 +62,11 @@ do
     "$dashes"*)
       printf "%s\n" "$dashes"
       ;;
+    *{%*)
+      # convert youtube shortcodes to Hugo style
+      # printf "%s" $(echo "$line" | sed 's/{% /{{< /' | sed 's/ %}/ >}}/')
+      printf "%s" $("$HOME/code/jtoh/fix-yt-shortcode.sh" "$line")
+      ;;
     *)
       # pass through all other lines
       printf "%s\n" "$line"
