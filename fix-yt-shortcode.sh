@@ -8,6 +8,6 @@ set -o pipefail
 # {{< ...>}} not {% ... %}
 #
 
-printf "%s" $(echo "$1" | sed 's/{%/{{</' | sed 's/%}/>}}/')
+awk '{printf "{{< %s %s >}}", $2, $3}' <<<"$1"
 
 exit 0
