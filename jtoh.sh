@@ -12,7 +12,7 @@ echo "Starting migration..."
 
 BEFORE="$HOME/code/jtoh/before"
 AFTER="$HOME/code/jtoh/after"
-filetotal=$(ls -1 "$BEFORE" | wc -l)
+filetotal=$(find "$BEFORE" -type f | wc -l)
 filecount=1
 
 cd "$BEFORE"
