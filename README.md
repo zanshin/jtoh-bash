@@ -18,7 +18,8 @@ Edit the `jtoh.sh` script and configure the paths to the `before` and `after` di
 appropriately.
 
 Execute `jtoh.sh`. It in turns executes the other scripts as necessary. As each posting is migrated
-it is placed in the `after` directory. At the end of the process some statistics are displayed.
+it is placed in the `after` directory. AS the files are processed a counter is displayed to show
+progress.
 
 ## Scripts
 The following scripts are included.
