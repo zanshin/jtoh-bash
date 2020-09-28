@@ -21,9 +21,4 @@ fi
 
 printf "date: %sT%s-05:00" "$ymd" "$hms"
 
-# Ought to work, but doesn't so fuck it
-# INPUT=$(awk '{$1=""; print}' | sed s"/^ //")
-# echo "INPUT: $INPUT"
-# printf "date: $(date +%s -d $INPUT '+%Y-%m-%dT%H:%M:%S-0500')"
-
 exit 0
